@@ -1,0 +1,20 @@
+[
+    {
+        "cep": "21060520",
+        "endereco": "Rua Sabauna",
+        "bairro": "Bonsucesso",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "pais": "Brasil",
+        "dataHora": "2025-11-14T17:00:00-03:00"
+    },
+    {
+        "cep": "21060530",
+        "endereco": "Rua Aquiri",
+        "bairro": "Ramos",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "pais": "Brasil",
+        "dataHora": "2025-11-14T17:00:08-03:00"
+    }
+]

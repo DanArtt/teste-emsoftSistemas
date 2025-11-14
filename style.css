@@ -1,0 +1,264 @@
+:root {
+  --emsoft: #343351;
+  --accent: #f36b21;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: #f6f7fb;
+  font-family: "Inter", sans-serif;
+}
+
+/* HEADER */
+.bg-emsoft {
+  background: var(--emsoft);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* CARDS */
+.card {
+  box-shadow: var(--shadow);
+  border-radius: 0 0 var(--radius) var(--radius) !important;
+  border: none;
+  /* remove qualquer efeito de movimento */
+}
+
+.card-header {
+  background: var(--emsoft);
+  color: #fff;
+  border-radius: var(--radius) var(--radius) 0 0 !important;
+  padding: 14px 22px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+input.form-control {
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  border: 1px solid #d6d6e0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(243, 107, 33, 0.25);
+}
+
+// validacao
+input.is-invalid {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.25);
+}
+input.is-valid {
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.25);
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: none;
+  border-color: var(--emsoft);
+  color: var(--emsoft);
+  border-radius: var(--radius);
+  padding: 10px 18px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover {
+  background: var(--emsoft);
+  border-color: var(--emsoft);
+}
+
+.btn-success {
+  background: none;
+  border-color: var(--accent);
+  color: var(--accent);
+  border-radius: var(--radius);
+}
+
+.btn-success:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-secondary {
+  border-radius: var(--radius);
+}
+
+/* FEEDBACK */
+.alert {
+  border-radius: var(--radius);
+  animation: fadeIn 0.3s ease;
+}
+
+.alert-success {
+  background: #e6f8ef;
+  color: #0f5132;
+  border-color: #b7ebc7;
+}
+
+.alert-danger {
+  background: #fdecea;
+  color: #842029;
+  border-color: #f5c2c7;
+}
+
+/* ADDRESS CARD ANIMATION */
+#addressCard {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+#addressCard.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LOADING */
+#loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--emsoft);
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+/* TEXT */
+h1,
+h2,
+h3,
+label {
+  color: var(--emsoft);
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.25s;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 576px) {
+  header img {
+    height: 28px;
+  }
+  .card {
+    margin: 0 6px;
+  }
+  .btn-primary {
+    margin-top: 15px;
+  }
+}
+
+/* -------------------------
+       🌙 TEMA DARK
+-------------------------- */
+body.dark {
+  background: #1a1a24;
+  color: #e2e2e8;
+}
+
+/* Header */
+body.dark .bg-emsoft {
+  background: #222136;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Cards */
+body.dark .card {
+  background: #262738;
+  color: #eee;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+body.dark .card-header {
+  background: #2b2b42 !important;
+  color: #fff;
+}
+
+body.dark input.form-control {
+  background: #1e1e2c;
+  color: #e4e3f0;
+  border: 1px solid #3a3a52;
+}
+body.dark input.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(243, 107, 33, 0.35);
+}
+
+body.dark input::placeholder {
+  color: #fff;
+}
+
+/* Buttons */
+body.dark .btn-primary {
+  background: none;
+  border-color: var(--emsoft);
+  color: #fff;
+}
+
+body.dark .btn-primary:hover {
+  background: var(--emsoft);
+  color: #fff;
+}
+
+body.dark .btn-outline-secondary {
+  color: #ccc;
+  border-color: #555;
+}
+body.dark .btn-outline-secondary:hover {
+  background: #444;
+}
+
+/* Alerts */
+body.dark .alert-success {
+  background: #213529;
+  border-color: #1f4b30;
+  color: #8fe2af;
+}
+body.dark .alert-danger {
+  background: #3b2023;
+  border-color: #66363b;
+  color: #ffb5b5;
+}
+
+/* Texto e títulos */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark label,
+body.dark p {
+  color: #f0f0f5;
+}
+
+/* Spinner */
+body.dark .spinner-border {
+  filter: brightness(0.8);
+}

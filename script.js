@@ -1,13 +1,11 @@
 // ---- Tema Dark ----
 const toggleBtn = document.getElementById("themeToggle");
 
-// Carrega tema salvo
 if (localStorage.getItem("tema") === "dark") {
   document.body.classList.add("dark");
   toggleBtn.textContent = "☀️ Light";
 }
 
-// Alternância clique
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
@@ -19,8 +17,6 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "🌙 Dark";
   }
 });
-
-// script.js melhorado — UX, animações e validações
 
 const cepForm = document.getElementById("cepForm");
 const cepInput = document.getElementById("cep");
@@ -118,7 +114,6 @@ cepForm.addEventListener("submit", async (e) => {
     document.getElementById("estado").value = data.uf || "";
     document.getElementById("pais").value = "Brasil";
 
-    // Exibir card com animação
     addressCard.classList.remove("d-none");
     setTimeout(() => addressCard.classList.add("show"), 10);
 
@@ -138,7 +133,6 @@ voltarBtn.addEventListener("click", () => {
   cepInput.focus();
 });
 
-//Envio dos dados para o back
 addressForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   saveFeedback.classList.add("d-none");
